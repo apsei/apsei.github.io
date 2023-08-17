@@ -43,6 +43,73 @@
 	background: url(../img/play-icon.svg) no-repeat center center;
 }
 
+.section-title {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	max-width: 247px;
+	text-transform: uppercase;
+	color: var(--primary-text);
+	font-weight: 700;
+	letter-spacing: 2;
+	line-height: 1;
+}
+
+.section-title-line {
+	width: 72px;
+	height: 0;
+	border: 2px solid var(--primary-text);
+}
+
+.section-title-long {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	max-width: 100%;
+	text-transform: uppercase;
+	color: var(--primary-text);
+	font-weight: 700;
+	letter-spacing: 2;
+	line-height: 1;
+}
+
+.section-title-long p {
+	min-width: max-content;
+}
+
+.section-title-long-line {
+	width: 100%;
+	height: 1px;
+	background: #E5E5E5;
+}
+
+.section-heading {
+	margin-top: 32px;
+	color: var(--primary-text);
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 57.6px;
+}
+
+.secondary-text {
+	margin-top: 32px;
+	color: var(--secondary-text);
+	line-height: 25.6px;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.section-more-button {
+	display: inline-block;
+	margin-top: 48px;
+}
+
+.ico.play-ico.big {
+	width: 64px;
+	height: 64px;
+	background: url(../img/play-icon-big.svg) no-repeat center;
+	cursor: pointer;
+}
 /* header */
 
 .header-container {
@@ -78,6 +145,7 @@
 
 .section-hero {
 	background: url(../img/bg-image.png) no-repeat center;
+	background-size: cover;
 	min-height: 100vh;
 }
 
@@ -143,6 +211,65 @@
 	margin: 0 24px;
 	background: #E5E5E5;
 	filter: blur(.5px);
+}
+
+/* section-about */
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: space-between;
+	margin-top: 96px;
+}
+
+.top-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.text {
+	margin-top: 62px;
+	max-width: 608px;
+}
+
+.text > *:not(.section-title) {
+	margin-left: 97px;
+}
+
+.text h2, .text p:not(.section-title p) {
+	min-width: 608px;
+}
+
+.about-video {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 480px;
+	min-height: 580px;
+	background: url(../img/about-video.png) no-repeat;
+	background-size: cover;
+}
+
+.about-video .ico {
+	transition: transform .25s ease;
+}
+
+.about-video:hover .ico {
+	transform: translateY(-3px);
+}
+
+.bottom-row {
+	display: flex;
+	flex-direction: column;
+	margin-top: 64px;
+}
+
+.logo-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 35px;
 }
 /* media querries */
 
