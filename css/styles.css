@@ -271,6 +271,10 @@
 	justify-content: space-between;
 	margin-top: 35px;
 }
+
+.logo-row img:hover {
+	cursor: pointer;
+}
 /* media querries */
 
 @media screen and (max-width: 1280px) {
