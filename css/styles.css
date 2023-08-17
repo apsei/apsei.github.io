@@ -297,6 +297,10 @@
 	max-width: 608px;
 }
 
+.section-do-content > *:not(.section-title) {
+	margin-left: 97px;
+}
+
 .do-list {
 	position: relative;
 	display: flex;
