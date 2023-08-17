@@ -26,11 +26,24 @@
 }
 .secondary-btn {
 	background-color: #fff;
+	font-weight: 500;
+	color: var(--primary-text);
 }
 .nav-btn {
 	padding-top: 12px;
 	background-color: var(--primary-text, #1D2130);
 }
+.ico {
+	display: inline-block;
+	min-width: 24px;
+	min-height: 24px;
+	margin-right: 2px;
+}
+.play-ico {
+	background: url(../img/play-icon.svg) no-repeat center center;
+}
+
+/* header */
 
 .header-container {
 	display: flex;
@@ -61,16 +74,87 @@
 	color: var(--black);
 }
 
+/* section-hero */
+
+.section-hero {
+	background: url(../img/bg-image.png) no-repeat center;
+	min-height: 100vh;
+}
+
+.hero-container {
+	padding-top: 128px;
+}
+
+.header-text {
+	display: flex;
+	flex-direction: column;
+	max-width: 640px;
+	gap: 48px;
+}
+
+.hero-heading {
+	color: #fff;
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 76.8px; 
+}
+
+.hero-buttons {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.video-play {
+	display: flex;
+	gap: 8px;
+	justify-content: space-between;
+	align-items: center;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+}
+
+.hero-statistics {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 192px;
+	color: #fff;
+	font-weight: 500;
+}
+
+.hero-statistics-text {
+	width: 204px;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1;
+}
+
+.hero-statistics-text:first-of-type {
+	width: 166px;
+}
+
+.hero-statistics-line {
+	width: 57vw;
+	height: 1px;
+	margin: 0 24px;
+	background: #E5E5E5;
+	filter: blur(.5px);
+}
 /* media querries */
 
 @media screen and (max-width: 1280px) {
 	.container {
-		padding: 0 20px;
+		padding: inherit 20px;
 	}
 }
 @media screen and (max-width: 820px) {
 	.header-container {
 		padding-top: 20px;
+		padding-bottom: 20px;
 		flex-direction: column;
 	}
 }
@@ -97,4 +181,18 @@
 	.nav-btn {
 		padding: 8px 26px;
 	}
+}
+
+/* retina-like displays */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .section-hero {
+        background-image: url('../img/bg-image2x.png');
+        background-size: cover;
+    }
 }
