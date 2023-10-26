@@ -682,7 +682,7 @@
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 22.4px;
-	opacity: 0.78;
+	opacity: .78;
 	cursor: pointer;
 }
 
@@ -791,7 +791,7 @@
 	color: var(--primary-text, #1D2130);
 	font-weight: 400;
 	line-height: 25.6px;
-	opacity: 0.7;
+	opacity: .7;
 }
 
 .about-more-video {
@@ -833,7 +833,57 @@
 	margin-top: 8px;
 	font-weight: 400;
 	line-height: 25.6px;
-	opacity: 0.7;
+	opacity: .7;
+}
+
+.section-awards {
+	margin-top: 96px;
+}
+
+.awards-container {
+	max-width: 1100px;
+}
+
+.awards-heading {
+	text-align: center;
+}
+
+.awards-list {
+	margin-top: 48px;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.awards-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.awards-item:hover {
+	cursor: pointer;
+}
+
+.award-year {
+	margin-top: 16px;
+	font-size: 24px;
+	line-height: 38.4px;
+}
+
+.award-title {
+	margin-top: 4px;
+	font-size: 16px;
+	line-height: 25.6px;
+}
+
+.award-place {
+	margin-top: 4px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 19.2px;
+	text-transform: uppercase;
+	opacity: .6;
 }
 
 /* media querries */
