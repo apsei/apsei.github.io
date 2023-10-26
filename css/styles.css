@@ -952,6 +952,127 @@
 	opacity: .6;
 }
 
+.section-team {
+	margin-top: 96px;
+}
+
+.team-heading {
+	text-align: center;
+}
+
+.section-description {
+	max-width: 519px;
+	margin: 16px auto;
+	text-align: center;
+	font-weight: 400;
+	line-height: 25.6px;
+	color: var(--secondary-text, #525560);
+	opacity: .6;
+}
+
+.employee-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 32px;
+	margin-top: 48px;
+}
+
+.employee-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.employee-item:nth-child(n + 5) {
+	margin-top: 48px;
+}
+
+.employee-photo {
+	width: 296px;
+	height: 320px;
+	border-radius: 8px;
+	background-image: url(/img/team-1.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.employee-item:nth-child(2) .employee-photo {
+	background-image: url(/img/team-2.png);
+	background-position: 50% 40%;
+	background-size: 200%;
+}
+
+.employee-item:nth-child(3) .employee-photo {
+	background-image: url(/img/team-3.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.employee-item:nth-child(4) .employee-photo {
+	background-image: url(/img/team-4.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.employee-item:nth-child(5) .employee-photo {
+	background-image: url(/img/team-5.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.employee-item:nth-child(6) .employee-photo {
+	background-image: url(/img/team-6.png);
+	background-position: 85% 50%;
+	background-size: cover;
+}
+
+.employee-item:nth-child(7) .employee-photo {
+	background-image: url(/img/team-7.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.employee-item:nth-child(8) .employee-photo {
+	background-image: url(/img/team-8.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.employee-name {
+	margin-top: 16px;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 32px;
+}
+
+.employee-appointment {
+	margin-top: 8px;
+	font-size: 12px;
+	font-weight: 500;
+	opacity: .6;
+}
+
+.employee-socials {
+	display: flex;
+	padding: 0;
+	gap: 20px;
+}
+
+.employee-social-link {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url(/img/facebook-ico.svg);
+}
+
+.employee-socials .employee-social:nth-child(2) .employee-social-link {
+	background-image: url(/img/twitter-ico.svg)
+}
+
+.employee-socials .employee-social:nth-child(3) .employee-social-link {
+	background-image: url(/img/linkedin-ico.svg)
+}
+
 /* media querries */
 
 @media screen and (max-width: 1280px) {
