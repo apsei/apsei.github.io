@@ -886,6 +886,72 @@
 	opacity: .6;
 }
 
+.section-journey {
+	margin-top: 96px;
+}
+
+.journey-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 64px 0 64px 96px;
+	background-color: var(--black, #0B0706);
+	border-radius: 12px;
+}
+
+.journey-heading {
+	color: #FFF;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.journey-title {
+	max-width: none;
+	color: #fff;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 57.6px;
+	text-transform: none;
+}
+
+.journey-description {
+	margin-top: 16px;
+	max-width: 488px;
+	color: #fff;
+	font-weight: 400;
+	line-height: 25.6px;
+	opacity: .6;
+}
+
+.journey-list {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	margin-top: 32px;
+	gap: 32px;
+}
+
+.journey-item {
+	display: flex;
+	flex-direction: column;
+}
+
+.journey-item-title {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 38.4px;
+}
+
+.journey-item-description {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 19.2px;
+	opacity: .6;
+}
+
 /* media querries */
 
 @media screen and (max-width: 1280px) {
