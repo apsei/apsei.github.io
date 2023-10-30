@@ -1073,6 +1073,53 @@
 	background-image: url(/img/linkedin-ico.svg)
 }
 
+
+/* Do more section */
+
+.section-do-more {
+	margin-top: 96px;
+}
+
+.do-more-container {
+	display: grid;
+	grid-template-columns: 2fr 1.25fr;
+}
+
+.do-more-text {
+	max-width: 690px;
+}
+
+.do-more-text * {
+	margin-inline-start: 96px;
+}
+
+.do-more-text .section-title, .section-title * {
+	margin-inline-start: 0;
+}
+
+.do-more-heading {
+	margin-top: 32px;
+	font-size: 3.5em;
+	font-weight: 700;
+	line-height: 120%;
+}
+
+.do-more-description {
+	margin-top: 34px;
+	font-weight: 400;
+	line-height: 160%;
+	color: var(--secondary-text, #525560);
+}
+
+.do-more-image {
+	min-width: 480px;
+	min-height: 384px;
+	border-radius: 12px;
+	background: url(/img/do-more.png);
+	background-size: cover;
+	background-position: center;
+}
+
 /* media querries */
 
 @media screen and (max-width: 1280px) {
