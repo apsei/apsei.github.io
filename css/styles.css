@@ -55,7 +55,6 @@
 	line-height: 1;
 }
 
-
 .section-title-line {
 	width: 72px;
 	height: 0;
@@ -1184,6 +1183,19 @@
 	font-size: .875em;
 	font-weight: 400;
 	line-height: 160%;
+}
+
+/* section projects (what we do page) */
+
+.do-more-center {
+	align-items: center;
+}
+
+.do-more-center .section-heading {
+	margin: 0;
+	margin-top: 16px;
+	text-align: center;
+	max-width: 700px;
 }
 
 /* media querries */
