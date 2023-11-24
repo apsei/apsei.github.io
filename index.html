@@ -15,16 +15,17 @@
 			<div class="logo">
 				<img src="./img/logo.svg" alt="Finsweet logo">
 			</div>
-			<nav class="nav">
-				<ul class="nav-list">
+			<nav class="nav header-nav">
+				<ul id="menuContainer" class="nav-list">
 					<li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="/about.html" class="nav-link">About Us</a></li>
 					<li class="nav-item"><a href="/do.html" class="nav-link">What We Do</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Media</a></li>
+					<li class="nav-item"><a href="/media.html" class="nav-link">Media</a></li>
 					<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
 				</ul>
 				<a href="#" class="btn nav-btn">Donate</a>
 			</nav>
+			<div id="menuButton" class="dropdown-btn">?</div>
 		</div>
 	</header>
 	<main>
@@ -252,8 +253,7 @@
 							</div>
 							<h3 class="events-card-title">Say no to plastic usage and save the planet</h3>
 						</div>
-						<a href="" class="events-link"><img src="./img/arrow-button.svg" alt="&nbsp;"
-								class="events-link-ico"></a>
+						<a href="" class="events-link"><img src="./img/arrow-button.svg" alt="&nbsp;" class="events-link-ico"></a>
 					</div>
 					<div class="events-card">
 						<div class="events-card-column">
@@ -266,8 +266,7 @@
 							</div>
 							<h3 class="events-card-title">Weekly cleaning program</h3>
 						</div>
-						<a href="" class="events-link"><img src="./img/arrow-button.svg" alt="&nbsp;"
-								class="events-link-ico"></a>
+						<a href="" class="events-link"><img src="./img/arrow-button.svg" alt="&nbsp;" class="events-link-ico"></a>
 					</div>
 				</div>
 			</div>
@@ -335,14 +334,47 @@
 				<form class="footer-form" action="submit" method="POST">
 					<label class="footer-form-caption" for="user-email">Subscribe to get latest updates</label>
 					<fieldset class="footer-form-interactions">
-						<input class="footer-form-email" type="email" name="user-email" id="user-email"
-							placeholder="Your email">
+						<input class="footer-form-email" type="email" name="user-email" id="user-email" placeholder="Your email">
 						<input class="btn secondary-btn footer-btn" type="submit" value="Subscribe">
 					</fieldset>
 				</form>
 			</div>
 		</div>
 	</footer>
+	<script>
+		document.addEventListener('keydown', function (event) {
+			if (event.key === 'z') {
+				console.log('Viewport Width:', window.innerWidth);
+			}
+		});
+
+		document.addEventListener('DOMContentLoaded', function () {
+			const button = document.getElementById('menuButton');
+			const menuContainer = document.getElementById('menuContainer');
+
+			button.addEventListener('click', function (event) {
+				event.stopPropagation();
+
+				menuContainer.className = 'dropdown-nav';
+
+				setTimeout(function () {
+					menuContainer.classList.add('active');
+				}, 1);
+			});
+
+			document.addEventListener('click', function (event) {
+				if (!menuContainer.contains(event.target)) {
+					menuContainer.classList.remove('active');
+				}
+			});
+
+			window.addEventListener('resize', function () {
+				if (window.innerWidth > 580) {
+					menuContainer.className = 'nav-list';
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>

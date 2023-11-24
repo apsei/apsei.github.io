@@ -15,16 +15,17 @@
 			<div class="logo">
 				<img src="./img/logo.svg" alt="Finsweet logo">
 			</div>
-			<nav class="nav">
-				<ul class="nav-list">
+			<nav class="nav header-nav">
+				<ul id="menuContainer" class="nav-list">
 					<li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="/about.html" class="nav-link">About Us</a></li>
 					<li class="nav-item"><a href="/do.html" class="nav-link">What We Do</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Media</a></li>
+					<li class="nav-item"><a href="/media.html" class="nav-link">Media</a></li>
 					<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
 				</ul>
 				<a href="#" class="btn nav-btn">Donate</a>
 			</nav>
+			<div id="menuButton" class="dropdown-btn">?</div>
 		</div>
 	</header>
 	<main>
@@ -348,6 +349,40 @@
       var modal = document.getElementById('modal-background');
       modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
     }
+	</script>
+	<script>
+		document.addEventListener('keydown', function (event) {
+			if (event.key === 'z') {
+				console.log('Viewport Width:', window.innerWidth);
+			}
+		});
+
+		document.addEventListener('DOMContentLoaded', function () {
+			const button = document.getElementById('menuButton');
+			const menuContainer = document.getElementById('menuContainer');
+
+			button.addEventListener('click', function (event) {
+				event.stopPropagation();
+
+				menuContainer.className = 'dropdown-nav';
+
+				setTimeout(function () {
+					menuContainer.classList.add('active');
+				}, 1);
+			});
+
+			document.addEventListener('click', function (event) {
+				if (!menuContainer.contains(event.target)) {
+					menuContainer.classList.remove('active');
+				}
+			});
+
+			window.addEventListener('resize', function () {
+				if (window.innerWidth > 580) {
+					menuContainer.className = 'nav-list';
+				}
+			});
+		});
 	</script>
 </body>
 
