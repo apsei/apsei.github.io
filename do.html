@@ -153,7 +153,7 @@
 				<div class="contribute-content">
 					<h2 class="section-heading contribute-heading">You can contribute to make the environment greener!</h2>
 					<ul class="contribute-btn-list">
-						<li class="contribute-item"><a href="" class="btn primary-btn">Join as a volunteer</a></li>
+						<li class="contribute-item"><a href="javascript:void(0);" class="btn primary-btn" onclick="openModal()">Join as a volunteer</a></li>
 						<li class="contribute-item"><a href="" class="btn secondary-btn">Donate</a></li>
 					</ul>
 				</div>
@@ -227,6 +227,44 @@
 				</div>
 			</div>
 		</section>
+		<div id="modal-background" onclick="closeModal(event)">
+			<div id="volunteer-modal" onclick="event.stopPropagation();">
+				<span id="modal-close" onclick="closeModal()"></span>
+				<h3 class="volunteer-heading">
+					Join as volunteer
+				</h3>
+				<p class="volunteer-description">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen varius enim in eros elementum tristique. 
+				</p>
+				<form action="" id="volunteer-form">
+					<fieldset id="full-name">
+						<div class="volunteer-input">
+							<label for="first_name">
+								First Name
+							</label>
+							<input type="text" name="first_name" id="first_name">
+						</div>
+						<div class="volunteer-input">
+							<label for="last_name">
+								Last Name
+							</label>
+							<input type="text" name="last_name" id="last_name">
+						</div>
+					</fieldset>
+					<label for="email">
+						Email id
+					</label>
+					<input type="email" name="email" id="email">
+					<label for="message">
+						Message
+					</label>
+					<textarea name="message" id="message" placeholder="Type your Message"></textarea>
+					<button type="submit" class="btn primary-btn" id="modalt">
+						Send Message
+					</button>
+				</form>
+			</div>
+		</div>
 	</main>
 	<footer class="footer">
 		<div class="container footer-container">
@@ -297,6 +335,20 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+		function openModal() {
+			document.getElementById("modal-background").style.display = "block";
+		}
+
+		function closeModal() {
+      document.getElementById('modal-background').style.display = 'none';
+    }
+
+		function toggleModal() {
+      var modal = document.getElementById('modal-background');
+      modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
+    }
+	</script>
 </body>
 
 </html>
