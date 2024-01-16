@@ -1549,6 +1549,13 @@
 	.chart-container {
 		gap: 15px;
 	}
+	.news-grid {
+		grid-template-columns: repeat(2, 2fr);
+		justify-items: center;
+	}
+	.news-card {
+		max-width: 302px;
+	}
 }
 
 @media screen and (max-width: 820px) {
@@ -1670,7 +1677,8 @@
 		line-height: 1.4;
 	}
 	.hero-buttons {
-		justify-content: space-evenly;	}
+		justify-content: space-evenly;	
+	}
 	.hero-buttons > .btn {
 		padding: 12px 26px;
 		transition: .5s;
