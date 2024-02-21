@@ -747,6 +747,11 @@ section {
 	display: inline-block;
 }
 
+.footer-column:last-child {
+	max-width: 544px;
+	flex-grow: 1;
+}
+
 .footer-logo img {
 	width: 110px;
 	filter: invert(100%);
@@ -759,6 +764,7 @@ section {
 	column-count: 3;
 	column-width: 75px;
 	gap: 80px;
+	transition: .5s;
 }
 
 .footer-nav-list li {
@@ -788,7 +794,7 @@ section {
 
 .footer-form-caption {
 	display: inline-block;
-	width: 440px;
+	max-width: 440px;
 	font-size: 40px;
 	font-weight: 700;
 	line-height: 56px;
@@ -801,8 +807,7 @@ section {
 	border: none;
 }
 
-.form::placeholder {
-	width: 76px;
+.footer-form-email::placeholder {
 	color: rgba(235, 240, 249, 0.30);
 	font-size: 16px;
 	font-weight: 400;
@@ -810,7 +815,7 @@ section {
 }
 
 .footer-form-email {
-	width: 405px;
+	flex-grow: 1;
 	height: 64px;
 	padding: 24px 0 24px 24px;
 	background: transparent;
@@ -1442,6 +1447,9 @@ section {
 		padding-top: 12px;
 		padding-bottom: 12px;
 	}
+	.footer-container {
+		padding-top: 96px;
+	}
 	.section-hero {
 		padding-top: 64px;
 	}
@@ -1539,6 +1547,11 @@ section {
 	.events-card-title {
 		width: 330px;
 	}
+	.footer-nav-list {
+		column-count: 3;
+		column-width: 50px;
+		gap: 20px;
+	}
 }
 
 @media screen and (max-width: 970px) {
@@ -1581,6 +1594,19 @@ section {
 	.events-link-alt {
 		display: inline-block;
 		margin: 0 auto;
+	}
+	.footer-container {
+		padding-top: 48px;
+	}
+	.footer-column:nth-child(1), .footer-column:nth-child(2) {
+		flex-shrink: 0;
+	}
+	.footer-column:nth-child(3) {
+		flex-shrink: 1;
+	}
+	.footer-form-caption {
+		font-size: 36px;
+
 	}
 }
 
@@ -1628,6 +1654,18 @@ section {
 	}
 	.events-card {
 		justify-content: center;
+	}
+	.footer-container {
+		flex-direction: column;
+		align-items: center;
+		padding-top: 18px;
+		gap: 18px;
+	}
+	.footer .logo img {
+		width: 200px;
+	}
+	.footer-nav-list {
+		column-gap: 105px;
 	}
 }
 @media screen and (max-width: 690px) {
@@ -1736,6 +1774,12 @@ section {
 	.contribute-content {
 		padding: 24px 0;
 	}
+	.contribute-btn-list {
+		gap: 18px;
+	}
+	.footer-nav-list {
+		column-gap: 35px;
+	}
 }
 
 @media screen and (max-width: 430px) {
@@ -1750,6 +1794,16 @@ section {
 		padding: 12px;
 		display: block;
 		text-align: center;
+	}
+	.footer {
+		padding-bottom: 24px;
+	}
+	.footer-form {
+		gap: 12px;
+	}
+	.footer-form-caption {
+		text-align: center;
+		font-size: 28px;
 	}
 }
 
