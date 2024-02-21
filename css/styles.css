@@ -49,6 +49,10 @@
 	background: url(../img/play-icon.svg) no-repeat center center;
 }
 
+section {
+	margin-top: 96px;
+}
+
 .section-title {
 	display: flex;
 	align-items: center;
@@ -193,7 +197,8 @@
 .section-hero {
 	background: url(../img/bg-image.png) no-repeat center;
 	background-size: cover;
-	min-height: calc(100vh - 128px);
+	/* min-height: calc(100vh - 128px); */
+	margin-top: 0;
 	padding-top: 128px;
 	transition: .3s;
 }
@@ -236,6 +241,7 @@
 }
 
 .hero-statistics {
+	margin-top: auto;
 	position: relative;
 	display: flex;
 	justify-self: center;
@@ -267,10 +273,6 @@
 }
 
 /* section-about */
-
-.section-about {
-	margin-top: 96px;
-}
 
 .about-container {
 	display: flex;
@@ -337,8 +339,8 @@
 /* section-do */
 
 .section-do {
-	margin-top: 65px;
-	padding: 96px 0;
+	margin-top: 64px;
+	padding-top: 96px;
 	background-color: var(--green-tertiary);
 	transition: .5s;
 }
@@ -417,10 +419,6 @@
 
 /* section projects */
 
-.section-projects {
-	margin-top: 96px;
-}
-
 .projects-container {
 	display: flex;
 	flex-direction: column;
@@ -484,7 +482,6 @@
 /* section chart */
 
 .section-chart {
-	margin-top: 96px;
 	background: var(--black, #0B0706);
 }
 
@@ -553,7 +550,6 @@
 /* section contribute */
 
 .section-contribute {
-	margin-top: 96px;
 	display: flex;
 	justify-content: center;
 }
@@ -587,13 +583,10 @@
 	display: flex;
 	margin-top: 32px;
 	gap: 32px;
+	transition: .5s;	
 }
 
 /* section news */
-
-.section-news {
-	margin-top: 96px;
-}
 
 .line-title {
 	position: relative;
@@ -645,10 +638,6 @@
 
 
 /* section events */
-
-.section-events {
-	margin-top: 96px;
-}
 
 /* bad ↓ */
 
@@ -842,10 +831,6 @@
 }
 
 /* ABOUT PAGE */
-
-.section-about-more {
-	margin-top: 96px;
-}
 
 .about-more-container {
 	display: flex;
@@ -1696,6 +1681,9 @@
 }
 
 @media screen and (max-width: 580px) {
+	section {
+		margin-top: 48px;
+	}
 	.header-container {
 		flex-direction: row;
 		justify-content: space-between;
@@ -1744,6 +1732,24 @@
 	}
 	.bottom-row {
 		margin-top: 32px;
+	}
+	.contribute-content {
+		padding: 24px 0;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.logo-row img:nth-child(3) {
+		display: none;
+	}
+	.contribute-btn-list {
+		flex-direction: column-reverse;
+		gap: 18px;
+}
+	.contribute-btn-list .btn {
+		padding: 12px;
+		display: block;
+		text-align: center;
 	}
 }
 
