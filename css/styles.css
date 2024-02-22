@@ -1,6 +1,6 @@
 @font-face {
-	font-family: Roboto;
-	src: url(/fonts/Roboto-Black.ttf) format(ttf);
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	src: url(/fonts/Roboto-Regular.ttf) format(ttf);
 }
 
 :root {
@@ -12,7 +12,7 @@
 	--secondary-text: #525560;
 	--off-white: #EBF0F9;
 	--border: #E5E5E5;
-	font-family: Roboto, sans-serif;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
 	overflow-x: hidden;
 }
 
@@ -925,10 +925,6 @@ section {
 	opacity: .7;
 }
 
-.section-awards {
-	margin-top: 96px;
-}
-
 .awards-container {
 	max-width: 1100px;
 }
@@ -973,10 +969,6 @@ section {
 	line-height: 19.2px;
 	text-transform: uppercase;
 	opacity: .6;
-}
-
-.section-journey {
-	margin-top: 96px;
 }
 
 .journey-container {
@@ -1041,14 +1033,6 @@ section {
 	opacity: .6;
 }
 
-.section-team {
-	margin-top: 96px;
-}
-
-.team-heading {
-	text-align: center;
-}
-
 .section-description {
 	max-width: 519px;
 	margin: 16px auto;
@@ -1059,11 +1043,19 @@ section {
 	opacity: .6;
 }
 
+.team-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .employee-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-column-gap: 32px;
+	grid-row-gap: 48px;
 	margin-top: 48px;
+	transition: .5s;
 }
 
 .employee-item {
@@ -1072,17 +1064,13 @@ section {
 	align-items: center;
 }
 
-.employee-item:nth-child(n + 5) {
-	margin-top: 48px;
+.employee-photo {
+	border-radius: 8px;
 }
 
-.employee-photo {
-	width: 296px;
-	height: 320px;
-	border-radius: 8px;
-	background-image: url(/img/team-1.png);
-	background-position: center;
-	background-size: cover;
+.employee-photo img {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .employee-item:nth-child(2) .employee-photo {
@@ -1132,6 +1120,7 @@ section {
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 32px;
+	text-align: center;
 }
 
 .employee-appointment {
@@ -1164,10 +1153,6 @@ section {
 
 
 /* Do more section */
-
-.section-do-more {
-	margin-top: 96px;
-}
 
 .do-more-container {
 	display: grid;
@@ -1212,7 +1197,6 @@ section {
 /* do-environment section */
 
 .section-do-environment {
-	margin-top: 96px;
 	padding: 96px 0;
 	background-color: var(--green-tertiary, #EFF7F2);
 }
@@ -1441,7 +1425,6 @@ section {
 /* section media-news */
 
 
-
 /* media querries */
 
 @media screen and (max-width: 1320px) {
@@ -1498,6 +1481,10 @@ section {
 	}
 	.events-card {
 		padding: 32px 2px 40px 26px;
+	}
+	.employee-grid {
+		grid-column-gap: 16px;
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
