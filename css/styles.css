@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Roboto;
+	src: url(/fonts/Roboto-Black.ttf) format(ttf);
+}
+
 :root {
 	--green-primary: #70C174;
 	--green-secondary: #BEF3C0;
