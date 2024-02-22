@@ -581,6 +581,7 @@ section {
 .contribute-heading {
 	color: #fff;
 	text-align: center;
+	margin: 0;
 }
 
 .contribute-btn-list {
@@ -851,6 +852,7 @@ section {
 .about-more-content {
 	display: flex;
 	gap: 64px;
+	transition: .5s;
 }
 
 .about-more-heading {
@@ -860,6 +862,7 @@ section {
 	font-size: 56px;
 	font-weight: 700;
 	line-height: 67.2px;
+	transition: .5s;
 }
 
 .about-more-text {
@@ -875,7 +878,7 @@ section {
 	line-height: 30px;
 }
 
-.about-more-text > .secondary-text { /*костыль >:(*/
+.about-more-text > .secondary-text {
 	margin: 0;
 	color: var(--primary-text, #1D2130);
 	font-weight: 400;
@@ -892,11 +895,13 @@ section {
 	border-radius: 12px;
 	background: url(/img/about-more-bg.png) no-repeat center;
 	background-size: cover;
+	transition: .5s;
 }
 
 .section-mission {
 	background: linear-gradient(to top, var(--green-tertiary, #EFF7F2) 0 79%, #fff 79% 100%);
 	padding-bottom: 96px;
+	transition: .5s;
 }
 
 .mission-content {
@@ -905,6 +910,7 @@ section {
 	margin-top: 96px;
 	padding-bottom: 96px;
 	gap: 96px;
+	transition: .5s;
 }
 
 .mission-item {
@@ -1486,6 +1492,10 @@ section {
 		grid-column-gap: 16px;
 		grid-template-columns: repeat(2, 1fr);
 	}
+	.about-more-content {
+		gap: 32px;
+		align-items: center;
+	}
 }
 
 @media screen and (max-width: 1200px) {
@@ -1544,6 +1554,9 @@ section {
 		column-width: 50px;
 		gap: 20px;
 	}
+	.about-more-heading {
+		margin-left: 0;
+	}
 }
 
 @media screen and (max-width: 970px) {
@@ -1598,7 +1611,14 @@ section {
 	}
 	.footer-form-caption {
 		font-size: 36px;
-
+	}
+	.about-more-heading {
+		font-size: 40px;
+		line-height: 1.5;
+	}
+	.mission-content {
+		padding-bottom: 32px;
+		gap: 32px;
 	}
 }
 
@@ -1659,6 +1679,10 @@ section {
 	.footer-nav-list {
 		column-gap: 105px;
 	}
+	.about-more-heading {
+		font-size: 32px;
+		line-height: 1.5;
+	}
 }
 @media screen and (max-width: 690px) {
 	.nav {
@@ -1682,6 +1706,11 @@ section {
 	}
 	.chart-vector {
 		max-width: 250px;
+	}
+	.about-more-heading {
+		margin-bottom: auto;
+		max-width: 200px;
+		flex-shrink: 0;
 	}
 }
 
@@ -1772,6 +1801,16 @@ section {
 	.footer-nav-list {
 		column-gap: 35px;
 	}
+	.about-more-content {
+		flex-direction: column;
+	}
+	.about-more-heading {
+		text-align: center;
+		max-width: none;
+	}
+	.about-more-video {
+		margin-top: 48px;
+	}
 }
 
 @media screen and (max-width: 430px) {
@@ -1793,9 +1832,15 @@ section {
 	.footer-form {
 		gap: 12px;
 	}
+	.section-mission {
+		padding-bottom: 48px;
+	}
 	.footer-form-caption {
 		text-align: center;
 		font-size: 28px;
+	}
+	.mission-content {
+		flex-direction: column;
 	}
 }
 
