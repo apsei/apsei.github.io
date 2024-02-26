@@ -2,6 +2,16 @@
 	font-family: Roboto, Arial, Helvetica, sans-serif;
 	src: url(/fonts/Roboto-Regular.ttf) format(ttf);
 }
+@font-face {
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	src: url(/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	src: url(/fonts/Roboto-Thin.ttf);
+}
 
 :root {
 	--green-primary: #70C174;
