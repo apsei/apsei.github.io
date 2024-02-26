@@ -75,6 +75,9 @@
 .play-ico {
 	background: url(../img/play-icon.svg) no-repeat center center;
 }
+.special {
+	display: none;
+}
 
 section {
 	margin-top: 96px;
@@ -964,8 +967,10 @@ section {
 .awards-list {
 	margin-top: 48px;
 	padding: 0;
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 16px;
+	transition: .5s;
 }
 
 .awards-item {
@@ -1734,6 +1739,10 @@ section {
 		max-width: 200px;
 		flex-shrink: 0;
 	}
+	.awards-list {
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: 32px;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -1863,6 +1872,15 @@ section {
 	}
 	.mission-content {
 		flex-direction: column;
+	}
+	.awards-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.employee-item:first-child .employee-name {
+		display: none;
+	}
+	.special {
+		display: inline !important;
 	}
 }
 
