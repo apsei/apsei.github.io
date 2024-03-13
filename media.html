@@ -15,16 +15,17 @@
 			<div class="logo">
 				<img src="./img/logo.svg" alt="Finsweet logo">
 			</div>
-			<nav class="nav">
-				<ul class="nav-list">
+			<nav class="nav header-nav">
+				<ul id="menuContainer" class="nav-list">
 					<li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="/about.html" class="nav-link">About Us</a></li>
 					<li class="nav-item"><a href="/do.html" class="nav-link">What We Do</a></li>
-					<li class="nav-item"><a href="#" class="nav-link">Media</a></li>
+					<li class="nav-item"><a href="/media.html" class="nav-link">Media</a></li>
 					<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
 				</ul>
 				<a href="#" class="btn nav-btn">Donate</a>
 			</nav>
+			<div id="menuButton" class="dropdown-btn">?</div>
 		</div>
 	</header>
 
@@ -47,7 +48,7 @@
 							<li class="media-news-item">
 								<img src="/img/media-news1.png" alt="Greenery">
 								<div class="media-news-text">
-									<h4 class="media-news-title">Don’t destroy greenery and don’t spoil scenery.</h4>
+									<h4 class="media-news-item-heading">Don’t destroy greenery and don’t spoil scenery.</h4>
 									<p class="media-news-description secondary-text">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
 									</p>
@@ -56,7 +57,7 @@
 							<li class="media-news-item">
 								<img src="/img/media-news2.png" alt="Dog">
 								<div class="media-news-text">
-									<h4 class="media-news-title">Why saving wildlife is extremely important</h4>
+									<h4 class="media-news-item-heading">Why saving wildlife is extremely important</h4>
 									<p class="media-news-description secondary-text">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
 									</p>
@@ -65,7 +66,7 @@
 							<li class="media-news-item">
 								<img src="/img/media-news3.png" alt="People">
 								<div class="media-news-text">
-									<h4 class="media-news-title">Caring for the present is caring for the future</h4>
+									<h4 class="media-news-item-heading">Caring for the present is caring for the future</h4>
 									<p class="media-news-description secondary-text">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
 									</p>
@@ -216,12 +217,6 @@
 		</div>
 	</footer>
 	<script>
-		document.addEventListener('keydown', function (event) {
-			if (event.key === 'z') {
-				console.log('Viewport Width:', window.innerWidth);
-			}
-		});
-
 		document.addEventListener('DOMContentLoaded', function () {
 			const button = document.getElementById('menuButton');
 			const menuContainer = document.getElementById('menuContainer');
