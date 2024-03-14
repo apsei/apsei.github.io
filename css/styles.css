@@ -774,6 +774,10 @@ section {
 	color: white;
 }
 
+.footer-special {
+	margin-top: 0;
+}
+
 .footer-container {
 	display: flex;
 	justify-content: space-between;
@@ -1740,6 +1744,19 @@ body.modal-open {
 #submit_btn .btn {
 	cursor: pointer;
 	border: none;
+}
+
+/* map section */
+
+.section-map {
+	height: 448px;
+}
+
+.contact-map {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* media querries */
