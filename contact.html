@@ -90,75 +90,34 @@
 				</div>
 			</div>
 		</section>
-		<section class="section-news">
-			<div class="container news-container">
-				<div class="section-title section-title-special">
-					<h2 class="news-title">Read our Recent News</h2>
-					<p class="secondary-text">Edit this text to make it your own. To edit, simply click directly on the text to start We are served</p>
-				</div>
-				<div class="news-grid">
-					<div class="news-card">
-						<img src="./img/news-thumbnail1.png" alt="News thumbnail" class="news-card-img">
-						<h3 class="news-heading">Don’t destroy greenery and don’t spoil scenery</h3>
-						<p class="news-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-						</p>
-					</div>
-					<div class="news-card">
-						<img src="./img/news-thumbnail2.png" alt="News thumbnail" class="news-card-img">
-						<h3 class="news-heading">Is climate change happening faster than expected?</h3>
-						<p class="news-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-						</p>
-					</div>
-					<div class="news-card">
-						<img src="./img/news-thumbnail3.png" alt="News thumbnail" class="news-card-img">
-						<h3 class="news-heading">Top 10 facts about wind farms you didn't know</h3>
-						<p class="news-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-						</p>
-					</div>
-					<div class="news-card">
-						<img src="./img/news-thumbnail4.png" alt="News thumbnail" class="news-card-img">
-						<h3 class="news-heading">Our goal is to make water available for everyone</h3>
-						<p class="news-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="section-events">
-			<div class="container events-container">
-				<div class="section-title line-title">
-					<h2 class="events-title">Our Events</h2>
-				</div>
-				<div class="events-grid">
-					<div class="events-card">
-						<div class="events-card-column">
-							<p class="date-day">23</p>
-							<p class="date-month">sep</p>
-						</div>
-						<div class="events-card-column">
-							<div class="events-card-next">
-								<p class="events-next-text">Next events</p>
-							</div>
-							<h3 class="events-card-title">Say no to plastic usage and save the planet</h3>
-						</div>
-						<a href="" class="events-link"><img src="./img/arrow-button.svg" alt="&nbsp;" class="events-link-ico"></a>
-					</div>
-					<div class="events-card">
-						<div class="events-card-column">
-							<p class="date-day">25</p>
-							<p class="date-month">sep</p>
-						</div>
-						<div class="events-card-column">
-							<div class="events-card-next">
-								<p class="events-next-text">Next events</p>
-							</div>
-							<h3 class="events-card-title">Weekly cleaning program</h3>
-						</div>
-						<a href="" class="events-link"><img src="./img/arrow-button.svg" alt="&nbsp;" class="events-link-ico"></a>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section class="section-contacts-form">
+      <div class="container contacts-form-container">
+        <form action="POST" id="contact-form">
+          <fieldset id="contact-full-name" class="contact-fieldset">
+            <label for="first_name">First Name</label>
+            <label for="last_name">Last Name</label>
+            <input type="text" placeholder="John" name="first_name" id="first_name">
+            <input type="text" placeholder="Doe" name="last_name" id="last_name">
+          </fieldset>
+          <fieldset id="communication-info" class="contact-fieldset">
+            <label for="email">Email id</label>
+            <label for="subject">Subject</label>
+            <input type="email" placeholder="johndoe@gmail.com" name="email" id="email">
+            <input type="text" name="subject" id="subject">
+          </fieldset>
+          <fieldset id="message_text" class="contact-fieldset">
+            <label for="message">Message</label>
+            <textarea name="message" placeholder="Type your Message" id="message"></textarea>
+          </fieldset>
+          <fieldset id="submit_btn" class="contact-fieldset">
+            <button type="submit" class="btn primary-btn">Send Message</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <section class="section-map">
+      
+    </section>
 	</main>
 	<footer class="footer">
 		<div class="container footer-container">

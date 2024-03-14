@@ -1575,6 +1575,7 @@ body.modal-open {
 }
 
 /* contacts page */
+/* section-contacts */
 
 .contacts-list {
 	padding: 0;
@@ -1662,6 +1663,83 @@ body.modal-open {
 
 .contacts-social-item:nth-child(3) {
 	background: url(../img/linkedin-ico.svg);
+}
+
+/* contact form */
+
+.contacts-form-container {
+	max-width: 768px;
+}
+
+#contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+#contact-form input::placeholder {
+	color: var(--primary-text, #1D2130);
+	opacity: 1;
+}
+
+#contact-form input:focus {
+	box-shadow: var(--border, #E5E5E5) 0 1.5px;
+}
+
+.contact-fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#contact-form label {
+	display: block;
+	color: var(--Primary-text, #1D2130);
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 160%;
+	opacity: .6;
+}
+
+#contact-form input, #contact-form input:active {
+	width: 100%;
+	padding-top: 10px;
+	border: none;
+	border-bottom: 1px solid var(--border, #E5E5E5);
+	outline: none;
+	color: var(--Primary-text, #1D2130);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 160%;
+	transition: 0.25s;
+}
+
+#contact-full-name {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 4.17%;
+}
+
+#communication-info {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 4.17%;
+}
+
+#message_text #message {
+	font-weight: 400;
+	color: var(--primary-text, #1D2130);
+	opacity: 1;
+}
+
+#submit_btn {
+	display: flex;
+	justify-content: center;
+}
+
+#submit_btn .btn {
+	cursor: pointer;
+	border: none;
 }
 
 /* media querries */
