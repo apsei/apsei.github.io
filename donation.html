@@ -178,38 +178,28 @@
     const sliderDesc = document.querySelectorAll('.contribute-slider-description');
 
     hoverElements.forEach((element, index) => {
-        element.addEventListener('mouseover', () => {
-            // Remove 'current' class from all navigation items
-            hoverElements.forEach(el => el.classList.remove('current'));
-            // Add 'current' class to the hovered navigation item
-            element.classList.add('current');
-        });
+			element.addEventListener('mouseover', () => {
+				hoverElements.forEach(el => el.classList.remove('current'));
+				element.classList.add('current');
+			});
 
-        element.addEventListener('mouseout', () => {
-					// Remove 'current' class from all navigation items
-					hoverElements.forEach(el => el.classList.remove('current'));
-					// If no navigation item is hovered, add 'current' class to the first item
-					if (![...hoverElements].some(el => el.matches(':hover'))) {
-							hoverElements[0].classList.add('current');
-					}
+			element.addEventListener('mouseout', () => {
+				hoverElements.forEach(el => el.classList.remove('current'));
+				if (![...hoverElements].some(el => el.matches(':hover'))) {
+					hoverElements[0].classList.add('current');
+				}
+			});
+			element.addEventListener('click', () => {
+				hoverElements.forEach(el => el.classList.remove('always-default'));
+				element.classList.add('always-default');
+
+				hoverElements.forEach(el => el.classList.remove('current'));
+				element.classList.add('current');
+				sliderDesc.forEach((desc, i) => {
+					desc.classList.toggle('active', i === index);
+					desc.classList.toggle('disabled', i !== index);
 				});
-				element.addEventListener('click', () => {
-            // Remove 'always-default' class from all navigation items
-            hoverElements.forEach(el => el.classList.remove('always-default'));
-            // Add 'always-default' class to the clicked navigation item
-            element.classList.add('always-default');
-
-            // Remove 'current' class from all navigation items
-            hoverElements.forEach(el => el.classList.remove('current'));
-            // Add 'current' class to the clicked navigation item
-            element.classList.add('current');
-
-            // Enable corresponding description paragraph and disable others
-            sliderDesc.forEach((desc, i) => {
-                desc.classList.toggle('active', i === index);
-                desc.classList.toggle('disabled', i !== index);
-            });
-        });
+			});
     });
 </script>
 </body>
