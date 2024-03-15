@@ -1776,16 +1776,14 @@ body.modal-open {
 	max-width: 517px;
 }
 
-/* .section-media-column img[src*="donation"] {
-	max-width: 480px;
-} */
-
 /* description section (w/ slider) */
 
 .contribute-details-container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 7.5%;
+	padding-bottom: 96px;
+	border-bottom: 1px solid var(--border, #E5E5E5);
 }
 
 .contribute-details-heading {
@@ -1849,6 +1847,14 @@ body.modal-open {
 
 .contribute-slider-description {
 	margin-top: 24px;
+}
+
+/* donation usage section */
+
+.donation-usage-container {
+	display: grid;
+	grid-template-columns: 1.5fr 1.4fr 1.4fr;
+	column-gap: 7.5%;
 }
 
 /* media querries */
@@ -2137,6 +2143,15 @@ body.modal-open {
 		max-height: 320px;
 		object-fit: cover;
 		border-radius: 8px;
+	}
+	.donation-usage-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: .5fr 1fr 1fr;
+		column-gap: 7.5%;
+	}
+	.donation-usage-heading {
+		text-align: center;
 	}
 }
 
