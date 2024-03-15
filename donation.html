@@ -33,7 +33,7 @@
 		<section class="section-media-news gbg">
 			<div class="container media-news-container">
 				<div class="section-media-content donation-more">
-					<div class="section-media-column">
+					<div class="section-media-column donation-column">
 						<div class="section-title media-news-title">
 							<div class="section-title-line"></div>
 							<p>Donate</p>
@@ -42,7 +42,7 @@
 						<p class="secondary-text">When you donate, you're supporting effective solutions to big environmental challenges — an investment in the future of our planet.</p>
 							<a href="" class="btn primary-btn">Donate now</a>
 					</div>
-					<div class="section-media-column">
+					<div class="section-media-column donation-column">
             <img src="/img/donation-img.png" alt="Donation image">
 					</div>
 				</div>
@@ -52,10 +52,33 @@
 			<div class="container contribute-details-container">
 				<div class="contribute-details-column">
 					<h2 class="section-heading contribute-details-heading">How you can contribute to protect Earth</h2>
-					<p class="contribute-details-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+					<p class="secondary-text contribute-details-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
 				</div>
 				<div class="contribute-details-column">
-					
+					<div class="contribute-details-slider">
+						<nav class="nav contribute-slider-nav">
+							<ul class="contribute-nav-list">
+								<li class="contribute-nav-item">
+									<span class="contribute-nav-heading current always-default">Overview</span>
+								</li>
+								<li class="contribute-nav-item">
+									<span class="contribute-nav-heading">Impact</span>
+								</li>
+								<li class="contribute-nav-item">
+									<span class="contribute-nav-heading">What You get</span>
+								</li>
+							</ul>
+						</nav>
+						<p class="secondary-text contribute-slider-description active">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.<br><br>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+						</p>
+						<p class="secondary-text contribute-slider-description disabled">
+							Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris vehicula dui sed nulla suscipit, nec sagittis nulla mollis. Nam ultrices vestibulum metus, nec porttitor dolor volutpat nec.<br><br>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla at enim nec velit lacinia varius. Donec finibus mauris id turpis blandit, eget laoreet purus convallis. In hac habitasse platea dictumst.
+						</p>
+						<p class="secondary-text contribute-slider-description disabled">
+							Quisque nec nunc a metus dictum tempus. Sed at vestibulum ligula, nec commodo sem. Vivamus et commodo sapien, nec convallis tortor. Sed lobortis neque in magna rhoncus, vel tincidunt neque vehicula.<br><br>sagittis pharetra enim, vel fringilla ipsum. Curabitur rhoncus tortor a libero feugiat lacinia. Integer ut ante nec sapien ultricies condimentum. Praesent auctor nibh at justo lobortis, a fermentum urna varius.
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -169,6 +192,30 @@
 			});
 		});
 	</script>
+	<script>
+    const hoverElements = document.querySelectorAll('.contribute-nav-heading');
+    const sliderDesc = document.querySelectorAll('.contribute-slider-description');
+
+    hoverElements.forEach((element, index) => {
+        element.addEventListener('click', () => {
+            // Remove active class from all navigation items
+            hoverElements.forEach(el => el.classList.remove('current', 'always-default'));
+            // Add active class to the clicked navigation item
+            element.classList.add('current', 'always-default');
+
+            // Enable corresponding description paragraph and disable others
+            sliderDesc.forEach((desc, i) => {
+                if (i === index) {
+                    desc.classList.remove('disabled');
+                    desc.classList.add('active');
+                } else {
+                    desc.classList.remove('active');
+                    desc.classList.add('disabled');
+                }
+            });
+        });
+    });
+</script>
 </body>
 
 </html>

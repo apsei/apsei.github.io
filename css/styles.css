@@ -158,6 +158,10 @@ section {
 	cursor: pointer;
 }
 
+.disabled {
+	display: none;
+}
+
 /* header */
 
 .header-container {
@@ -1761,8 +1765,90 @@ body.modal-open {
 
 /* donation page */
 
-.section-media-column img[src*="donation"] {
+/* heading section */
+
+.section-media-content.donation-more {
+	grid-template-columns: 1.5fr 1fr;
+	column-gap: 5.9375%;
+}
+
+.donation-column .secondary-text {
+	max-width: 517px;
+}
+
+/* .section-media-column img[src*="donation"] {
 	max-width: 480px;
+} */
+
+/* description section (w/ slider) */
+
+.contribute-details-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 7.5%;
+}
+
+.contribute-details-heading {
+	margin: 0;
+}
+
+.contribute-details-description {
+	margin-top: 24px;
+}
+
+.contribute-nav-list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	border-bottom: 2px solid var(--border, #E5E5E5);
+}
+
+.contribute-nav-heading {
+	display: inline-block;
+	position: relative;
+	padding: 8px 24px;
+	line-height: 160%;
+	font-weight: 500;
+	color: var(--secondary-text, #525560);
+	cursor: pointer;
+	transition: color .25s;
+}
+
+.contribute-nav-heading.current {
+	color: var(--primary-text, #1D2130);
+}
+
+.contribute-nav-heading.always-default {
+	color: var(--primary-text, #1D2130);
+}
+
+.contribute-nav-heading::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 0;
+	border-bottom: 2px solid var(--green-primary, #70C174);
+	transition: width .25s;
+}
+
+.contribute-nav-heading.current::after,
+.contribute-nav-heading.always-default::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 100%;
+	border-bottom: 2px solid var(--green-primary, #70C174);
+	transition: width .25s;
+}
+
+.contribute-nav-heading:hover::after {
+	width: 100%;
+}
+
+.contribute-slider-description {
+	margin-top: 24px;
 }
 
 /* media querries */
@@ -2011,7 +2097,7 @@ body.modal-open {
 		padding: 24px 24px 42px 42px;
 	}
 	.section-media-content {
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: repeat(1, 1fr) !important;
 		gap: 48px;
 	}
 	.section-media-column:has(.section-title) {
