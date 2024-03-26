@@ -2039,18 +2039,6 @@ body.modal-open {
 	color: var(--primary-text, #1D2130);
 }
 
-/* .event-info-item::before {
-	content: url(../img/event-address-ico.svg);
-	position: absolute;
-	left: -28px;
-	top: 0;
-}
-
-.event-info-item:last-child::before {
-	content: url(../img/event-address-ico1.svg);
-	left: -32px;
-} */
-
 .event-item-address {
 	font-style: normal;
 }
