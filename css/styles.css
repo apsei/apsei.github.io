@@ -382,6 +382,7 @@ section {
 .section-do {
 	margin-top: 64px;
 	padding-top: 96px;
+	padding-bottom: 96px;
 	background-color: var(--green-tertiary);
 	transition: .5s;
 }
@@ -714,7 +715,7 @@ section {
 
 .events-card {
 	display: flex;
-	/* flex-wrap: wrap; */
+	flex-wrap: wrap;
 	gap: 24px;
 	padding: 32px 48px 40px 40px;
 	background: var(--green-secondary, #BEF3C0);
@@ -771,6 +772,7 @@ section {
 
 .footer {
 	margin-top: 96px;
+	padding-bottom: 32px;
 	background: var(--black, black);
 	color: white;
 }
@@ -2028,8 +2030,7 @@ body.modal-open {
 	padding: 0;
 	padding-left: 28px;
 	display: flex;
-	gap: 48px;
-	list-style-image: url(../img/event-address-ico.svg);
+	gap: 78px;
 }
 
 .event-info-item {
@@ -2037,6 +2038,17 @@ body.modal-open {
 	font-weight: 500;
 	line-height: 160%;
 	color: var(--primary-text, #1D2130);
+}
+
+.event-info-item::before {
+	content: url(../img/event-address-ico.svg);
+	position: absolute;
+	top: 0;
+	left: -29px;
+}
+
+.event-info-item:last-child::before {
+	content: url(../img/event-address-ico1.svg);
 }
 
 .event-item-address {
@@ -2211,11 +2223,11 @@ body.modal-open {
 		gap: 75px;
 	}
 	.events-grid {
-		grid-template-columns: .55fr;
+		grid-template-columns: repeat(1, .65fr);
 		justify-content: center;
 	}
 	.events-card-title {
-		width: 330px;
+		max-width: 330px;
 	}
 	.footer-nav-list {
 		column-count: 3;
@@ -2282,13 +2294,6 @@ body.modal-open {
 	}
 	.news-card {
 		max-width: 302px;
-	}
-	.events-link {
-		display: none;
-	}
-	.events-link-alt {
-		display: inline-block;
-		margin: 0 auto;
 	}
 	.footer-container {
 		padding-top: 48px;
@@ -2381,6 +2386,10 @@ body.modal-open {
 	}
 	.donation-usage-heading {
 		text-align: center;
+	}
+	.events-grid {
+		grid-template-columns: repeat(1, .8fr);
+		justify-content: center;
 	}
 }
 
@@ -2496,6 +2505,9 @@ body.modal-open {
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 32px;
 	}
+	.events-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 	#volunteer-modal {
 		max-height: none;
 	}
@@ -2516,12 +2528,12 @@ body.modal-open {
 		font-size: 18px;
 		line-height: 140%;
 	}
-	.project-stats-list {
+	.project-stats-list, .events-grid {
 		grid-template-columns: repeat(1, 1fr);
 	}
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 580px) {
 	#modal-background {
 		padding: 16px;
 	}
@@ -2565,9 +2577,7 @@ body.modal-open {
 		object-fit: cover;
 		border-radius: 8px;
 	}
-}
 
-@media screen and (max-width: 580px) {
 	section {
 		margin-top: 48px;
 	}
@@ -2643,6 +2653,27 @@ body.modal-open {
 		font-size: 32px;
 		line-height: 1.4;
 	}
+	.events-card-content {
+		flex-direction: column;
+		align-items: center;
+	}
+	.events-link {
+		display: none;
+	}
+	.events-link-alt {
+		display: inline-block;
+		text-align: center;
+	}
+	.other-events-grid .events-card a {
+		margin-left: 0;
+	}
+	.section-event-heading {
+		padding-top: 48px;
+	}
+	.event-heading {
+		font-size: 42px;
+		line-height: 150%;
+	}
 }
 
 @media screen and (max-width: 430px) {
@@ -2652,14 +2683,11 @@ body.modal-open {
 	.contribute-btn-list {
 		flex-direction: column-reverse;
 		gap: 18px;
-}
+	}
 	.contribute-btn-list .btn {
 		padding: 12px;
 		display: block;
 		text-align: center;
-	}
-	.footer {
-		padding-bottom: 24px;
 	}
 	.footer-form {
 		gap: 12px;
@@ -2688,6 +2716,48 @@ body.modal-open {
 	}
 	.media-news-text {
 		text-align: center;
+	}
+	.hero-buttons {
+		flex-direction: column;
+	}
+	.hero-statistics-line {
+		margin: 0 8px;
+	}
+	.news-grid {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 48px;
+	}
+	.contribute-heading {
+		font-size: 28px;
+		line-height: 170%;
+	}
+	.footer-form-email {
+		height: 48px;
+		padding: 20px 0 20px 10px;
+		background: transparent;
+		color: #fff;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border: 1px solid rgba(235, 240, 249, 0.30);
+		border-right: none;
+	}
+	
+	.footer-btn {
+		height: 48px;
+		padding: 0px 12px;
+		color: var(--Primary-text, #1D2130);
+		font-size: 16px;
+		font-weight: 500;
+		line-height: normal;
+		cursor: pointer;
+	}
+	.other-events-title {
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 150%;
+	}
+	.other-events-grid {
+		margin-top: 28px;
 	}
 }
 
