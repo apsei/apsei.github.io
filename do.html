@@ -154,7 +154,8 @@
 				<div class="contribute-content">
 					<h2 class="section-heading contribute-heading">You can contribute to make the environment greener!</h2>
 					<ul class="contribute-btn-list">
-						<li class="contribute-item"><a href="javascript:void(0);" class="btn primary-btn" onclick="openModal()">Join as a volunteer</a></li>
+						<li class="contribute-item"><a href="javascript:void(0);" class="btn primary-btn" onclick="openModal()">Join
+								as a volunteer</a></li>
 						<li class="contribute-item"><a href="" class="btn secondary-btn">Donate</a></li>
 					</ul>
 				</div>
@@ -230,6 +231,7 @@
 							<a href="" class="events-link"><img src="./img/arrow-button.svg" alt="&nbsp;" class="events-link-ico"></a>
 							<a href="" class="btn secondary-btn events-link-alt">Check it out</a>
 						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -240,7 +242,7 @@
 					Join as volunteer
 				</h3>
 				<p class="volunteer-description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen varius enim in eros elementum tristique. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen varius enim in eros elementum tristique.
 				</p>
 				<form action="" id="volunteer-form">
 					<fieldset id="full-name">
@@ -348,15 +350,15 @@
 		}
 
 		function closeModal() {
-      document.getElementById('modal-background').style.display = 'none';
+			document.getElementById('modal-background').style.display = 'none';
 			document.body.classList.remove('modal-open');
-    }
+		}
 
 		function toggleModal() {
-      var modal = document.getElementById('modal-background');
-      modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
+			var modal = document.getElementById('modal-background');
+			modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
 			document.body.classList.toggle('modal-open');
-    }
+		}
 	</script>
 	<script>
 		document.addEventListener('keydown', function (event) {
