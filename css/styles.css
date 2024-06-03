@@ -1,29 +1,3 @@
-@font-face {
-	font-family: Roboto, Arial, Helvetica, sans-serif;
-	font-weight: 700;
-	src: url(/fonts/Roboto-Bold.ttf);
-}
-@font-face {
-	font-family: Roboto, Arial, Helvetica, sans-serif;
-	font-weight: 500;
-	src: url(/fonts/Roboto-Medium.ttf);
-}
-@font-face {
-	font-family: Roboto, Arial, Helvetica, sans-serif;
-	font-weight: 400;
-	src: url(/fonts/Roboto-Regular.ttf) format(ttf);
-}
-@font-face {
-	font-family: Roboto, Arial, Helvetica, sans-serif;
-	font-weight: 300;
-	src: url(/fonts/Roboto-Light.ttf);
-}
-@font-face {
-	font-family: Roboto, Arial, Helvetica, sans-serif;
-	font-weight: 100;
-	src: url(/fonts/Roboto-Thin.ttf);
-}
-
 :root {
 	--green-primary: #70C174;
 	--green-secondary: #BEF3C0;
@@ -49,7 +23,6 @@
 }
 
 /* blue background */
-
 .bbg {
 	background: var(--off-white, #EBF0F9);
 }
