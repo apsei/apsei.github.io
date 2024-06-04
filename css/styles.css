@@ -209,9 +209,8 @@ section {
 /* section-hero */
 
 .section-hero {
-	background: url(../img/bg-image.png) no-repeat center;
+	background: url(../img/bg-image.webp) no-repeat center;
 	background-size: cover;
-	/* min-height: calc(100vh - 128px); */
 	margin-top: 0;
 	padding-top: 128px;
 	transition: .3s;
@@ -319,7 +318,7 @@ section {
 	align-items: center;
 	width: 480px;
 	height: 580px;
-	background: url(../img/about-video.png) no-repeat;
+	background: url(../img/about-video.webp) no-repeat;
 	background-size: cover;
 	transition: .8s;
 }
@@ -463,17 +462,17 @@ section {
 	position: relative;
 	padding: 80px 48px 48px;
 	border-radius: 12px;
-	background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/project-1.png);
+	background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/project-1.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .section-projects-card:nth-child(2) {
-	background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/project-2.png) no-repeat center;
+	background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/project-2.webp) no-repeat center;
 }
 
 .section-projects-card:nth-child(3) {
-	background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/project-3.png) no-repeat center;
+	background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/project-3.webp) no-repeat center;
 }
 
 .projects-card-heading {
@@ -576,7 +575,7 @@ section {
 	align-items: center;
 	margin: 0 20px;
 	border-radius: 12px;
-	background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/contribute-bg.png) no-repeat;
+	background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../img/contribute-bg.webp) no-repeat;
 	background-size: cover;
 }
 
@@ -655,8 +654,6 @@ section {
 
 /* section events */
 
-/* bad ↓ */
-
 .events-title { 
 	position: relative;
 	color: var(--Primary-text, #1D2130);
@@ -667,7 +664,6 @@ section {
 	text-transform: none;
 }
 
-/* bad ↑ */
 
 .events-title::after {
 	content: "";
@@ -904,7 +900,7 @@ section {
 	align-items: center;
 	height: 448px;
 	border-radius: 12px;
-	background: url(/img/about-more-bg.png) no-repeat center;
+	background: url(/img/about-more-bg.webp) no-repeat center;
 	background-size: cover;
 	transition: .5s;
 }
@@ -1096,43 +1092,43 @@ section {
 }
 
 .employee-item:nth-child(2) .employee-photo {
-	background-image: url(/img/team-2.png);
+	background-image: url(/img/team-2.webp);
 	background-position: 50% 40%;
 	background-size: 200%;
 }
 
 .employee-item:nth-child(3) .employee-photo {
-	background-image: url(/img/team-3.png);
+	background-image: url(/img/team-3.webp);
 	background-position: center;
 	background-size: cover;
 }
 
 .employee-item:nth-child(4) .employee-photo {
-	background-image: url(/img/team-4.png);
+	background-image: url(/img/team-4.webp);
 	background-position: center;
 	background-size: cover;
 }
 
 .employee-item:nth-child(5) .employee-photo {
-	background-image: url(/img/team-5.png);
+	background-image: url(/img/team-5.webp);
 	background-position: center;
 	background-size: cover;
 }
 
 .employee-item:nth-child(6) .employee-photo {
-	background-image: url(/img/team-6.png);
+	background-image: url(/img/team-6.webp);
 	background-position: 85% 50%;
 	background-size: cover;
 }
 
 .employee-item:nth-child(7) .employee-photo {
-	background-image: url(/img/team-7.png);
+	background-image: url(/img/team-7.webp);
 	background-position: center;
 	background-size: cover;
 }
 
 .employee-item:nth-child(8) .employee-photo {
-	background-image: url(/img/team-8.png);
+	background-image: url(/img/team-8.webp);
 	background-position: center;
 	background-size: cover;
 }
@@ -1212,7 +1208,7 @@ section {
 	min-width: 480px;
 	min-height: 384px;
 	border-radius: 12px;
-	background: url(/img/do-more.png);
+	background: url(/img/do-more.webp);
 	background-size: cover;
 	background-position: center;
 }
@@ -2536,7 +2532,7 @@ body.modal-open {
 		min-width: 1vw;
 		min-height: 384px;
 		border-radius: 12px;
-		background: url(/img/do-more.png);
+		background: url(/img/do-more.webp);
 		background-size: cover;
 		background-position: center;
 	}
@@ -2743,7 +2739,7 @@ only screen and (min-device-pixel-ratio: 2),
 only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
     .section-hero {
-        background-image: url('../img/bg-image2x.png');
+        background-image: url('../img/bg-image2x.webp');
         background-size: cover;
     }
 	}
