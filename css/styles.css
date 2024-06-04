@@ -905,6 +905,14 @@ section {
 	transition: .5s;
 }
 
+.about-more-video .ico {
+	transition: transform .25s ease;
+}
+
+.about-more-video:hover .ico {
+	transform: translateY(-3px);
+}
+
 .section-mission {
 	background: linear-gradient(to top, var(--green-tertiary, #EFF7F2) 0 79%, #fff 79% 100%);
 	padding-bottom: 96px;
