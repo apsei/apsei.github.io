@@ -38,7 +38,13 @@
 					<h1 class="hero-heading">Save the environment today for a better tomorrow</h1>
 					<div class="hero-buttons">
 						<a href="/do.html#do" class="btn secondary-btn">What we do</a>
-						<button class="video-play"><span class="ico play-ico"></span>Play Video</button>
+						<div class="video-container">
+							<button class="video-play" onclick="showNotifier()"><span class="ico play-ico"></span>Play Video</button>
+							<div class="video-play-notifier disabled">
+								<h4 class="video-notifier-heading">No video here!</h4>
+								<a href="https://www.figma.com/community/file/1036420344519462418/client-first-template-7" class="video-notifier-link">See the template</a>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="hero-statistics">
@@ -404,6 +410,18 @@
       modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
 			document.body.classList.toggle('modal-open');
     }
+	</script>
+	<script>
+		const playButton = document.querySelector('.video-play');
+		const videoNotifier = document.querySelector('.video-play-notifier');
+		function showNotifier() {
+			videoNotifier.className= 'video-play-notifier';
+		}
+		document.addEventListener('click', function (event) {
+			if (!videoNotifier.contains(event.target) && !playButton.contains(event.target)) {
+				videoNotifier.classList.add('disabled');
+			}
+		})
 	</script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
