@@ -154,7 +154,8 @@ section {
 	padding: 6px 12px;
 	background: var(--off-white, #EBF0F9);
 	border-radius: 4px;
-		animation: modal .1s ease-in;
+	animation: modal .1s ease-in;
+	z-index: 2;
 }
 .video-notifier-heading {
 	font-size: 14px;
