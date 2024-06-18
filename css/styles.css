@@ -144,6 +144,10 @@ section {
 .video-container {
 	position: relative;
 }
+.about-video .video-play-notifier {
+	width: 200%;
+	transform: translateX(-25%);
+}
 .video-play-notifier {
 	position: absolute;
 	top: 150%;

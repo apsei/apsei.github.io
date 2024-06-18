@@ -9,6 +9,7 @@
 	<link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 	<link rel="stylesheet" href="/css/reset.css">
 	<link rel="stylesheet" href="/css/styles.css">
+	<script src="/js/video-notifiers.js" defer></script>
 	<title>Finsweet</title>
 </head>
 
@@ -39,8 +40,8 @@
 					<div class="hero-buttons">
 						<a href="/do.html#do" class="btn secondary-btn">What we do</a>
 						<div class="video-container">
-							<button class="video-play" onclick="showNotifier()"><span class="ico play-ico"></span>Play Video</button>
-							<div class="video-play-notifier disabled">
+							<button class="video-play" data-id="1" onclick="showNotifier()"><span class="ico play-ico"></span>Play Video</button>
+							<div class="video-play-notifier disabled" data-id="1">
 								<h4 class="video-notifier-heading">No video here!</h4>
 								<a href="https://www.figma.com/community/file/1036420344519462418/client-first-template-7" target="_blank" class="video-notifier-link">See the template</a>
 							</div>
@@ -75,8 +76,8 @@
 					</div>
 					<div class="about-video">
 						<div class="video-container">
-							<span class="ico play-ico big video-play" onclick="showNotifier()"></span>
-							<div class="video-play-notifier disabled">
+							<span class="ico play-ico big video-play" data-id="2" onclick="showNotifier()"></span>
+							<div class="video-play-notifier disabled" data-id="2">
 								<h4 class="video-notifier-heading">No video here!</h4>
 								<a href="https://www.figma.com/community/file/1036420344519462418/client-first-template-7" target="_blank" class="video-notifier-link">See the template</a>
 							</div>
@@ -416,18 +417,6 @@
       modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
 			document.body.classList.toggle('modal-open');
     }
-	</script>
-	<script>
-		const playButton = document.querySelector('.video-play');
-		const videoNotifier = document.querySelector('.video-play-notifier');
-		function showNotifier() {
-			videoNotifier.className= 'video-play-notifier';
-		}
-		document.addEventListener('click', function (event) {
-			if (!videoNotifier.contains(event.target) && !playButton.contains(event.target)) {
-				videoNotifier.classList.add('disabled');
-			}
-		})
 	</script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
