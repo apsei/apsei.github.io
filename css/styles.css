@@ -144,6 +144,10 @@ section {
 .video-container {
 	position: relative;
 }
+.about-video .video-play-notifier {
+	width: 200%;
+	transform: translateX(-25%);
+}
 .video-play-notifier {
 	position: absolute;
 	top: 150%;
@@ -154,7 +158,8 @@ section {
 	padding: 6px 12px;
 	background: var(--off-white, #EBF0F9);
 	border-radius: 4px;
-		animation: modal .1s ease-in;
+	animation: modal .1s ease-in;
+	z-index: 2;
 }
 .video-notifier-heading {
 	font-size: 14px;
@@ -388,6 +393,8 @@ section {
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 35px;
+	gap: 15px;
+	overflow: hidden;
 }
 
 .logo-row img:hover {
@@ -2301,9 +2308,6 @@ body.modal-open {
 	.about-video {
 		width: 310px;
 	}
-	.logo-row img:last-child {
-		display: none;
-	}
 	.do-container {
 		display: flex;
 		flex-direction: column;
@@ -2442,9 +2446,6 @@ body.modal-open {
 		width: 100%;
 		margin: 32px auto;
 	}
-	.logo-row img:nth-child(4) {
-		display: none;
-	}
 	.section-projects-grid {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -2520,9 +2521,6 @@ body.modal-open {
 	.nav-btn {
 		padding: 8px 26px;
 		transition: .3s;
-	}
-	.logo-row img:nth-child(1) {
-		display: none;
 	}
 	.chart-container {
 		flex-direction: column;
@@ -2714,9 +2712,6 @@ body.modal-open {
 }
 
 @media screen and (max-width: 430px) {
-	.logo-row img:nth-child(3) {
-		display: none;
-	}
 	.contribute-btn-list {
 		flex-direction: column-reverse;
 		gap: 18px;
