@@ -9,6 +9,8 @@
 	<link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/styles.css">
+	<script src="/js/mobile-menu.js" defer></script>
+	<script src="/js/modal.js" defer></script>
 	<title>What We Do</title>
 </head>
 
@@ -345,57 +347,6 @@
 			</div>
 		</div>
 	</footer>
-	<script>
-		function openModal() {
-			document.getElementById("modal-background").style.display = "block";
-			document.body.classList.add('modal-open');
-		}
-
-		function closeModal() {
-      document.getElementById('modal-background').style.display = 'none';
-			document.body.classList.remove('modal-open');
-    }
-
-		function toggleModal() {
-      var modal = document.getElementById('modal-background');
-      modal.style.display = (modal.style.display === 'block') ? 'none' : 'block';
-			document.body.classList.toggle('modal-open');
-    }
-	</script>
-	<script>
-		document.addEventListener('keydown', function (event) {
-			if (event.key === 'z') {
-				console.log('Viewport Width:', window.innerWidth);
-			}
-		});
-
-		document.addEventListener('DOMContentLoaded', function () {
-			const button = document.getElementById('menuButton');
-			const menuContainer = document.getElementById('menuContainer');
-
-			button.addEventListener('click', function (event) {
-				event.stopPropagation();
-
-				menuContainer.className = 'dropdown-nav';
-
-				setTimeout(function () {
-					menuContainer.classList.add('active');
-				}, 1);
-			});
-
-			document.addEventListener('click', function (event) {
-				if (!menuContainer.contains(event.target)) {
-					menuContainer.classList.remove('active');
-				}
-			});
-
-			window.addEventListener('resize', function () {
-				if (window.innerWidth > 580) {
-					menuContainer.className = 'nav-list';
-				}
-			});
-		});
-	</script>
 </body>
 
 </html>

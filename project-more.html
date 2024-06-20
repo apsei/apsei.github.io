@@ -9,6 +9,7 @@
 	<link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/styles.css">
+	<script src="/js/mobile-menu.js" defer></script>
 	<title>Cleanliness program</title>
 </head>
 
@@ -225,34 +226,6 @@ Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit dignissim 
 			</div>
 		</div>
 	</footer>
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			const button = document.getElementById('menuButton');
-			const menuContainer = document.getElementById('menuContainer');
-
-			button.addEventListener('click', function (event) {
-				event.stopPropagation();
-
-				menuContainer.className = 'dropdown-nav';
-
-				setTimeout(function () {
-					menuContainer.classList.add('active');
-				}, 1);
-			});
-
-			document.addEventListener('click', function (event) {
-				if (!menuContainer.contains(event.target)) {
-					menuContainer.classList.remove('active');
-				}
-			});
-
-			window.addEventListener('resize', function () {
-				if (window.innerWidth > 580) {
-					menuContainer.className = 'nav-list';
-				}
-			});
-		});
-	</script>
 </body>
 
 </html>
